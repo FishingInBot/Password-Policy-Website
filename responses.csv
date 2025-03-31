@@ -1,0 +1,5 @@
+timestamp,policy_index,policy,password_length,count_upper,count_lower,count_digit,count_special,frustration_rating,perceived_strength,memorability,time_taken
+1743447567,1,Password must be at least 12 characters long and contain at least one special character.,16,3,13,0,0,18.029,3,5,2
+1743447575,2,"Password must include at least one uppercase letter, one lowercase letter, and one digit.",7,0,7,0,0,1.657,3,3,3
+1743447581,3,Password must be a passphrase of three or more words.,9,0,9,0,0,1.924,3,3,3
+1743448292,0,Password must be at least 8 characters long.,11,0,11,0,0,3.651,4,4,4
