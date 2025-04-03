@@ -1,5 +1,3 @@
 # Lets ignore standard python files that we use in our project
 __pycache__/
 .env
-things.txt
-*.pyc
