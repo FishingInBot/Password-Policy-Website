@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Creation Study</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 600px; margin: 0 auto; }
+    label, p { margin: 10px 0; display: block; }
+    input[type="password"], input[type="submit"] {
+      width: 100%; padding: 10px; margin-top: 10px; margin-bottom: 20px;
+    }
+  </style>
+  <script>
+  var startTime = new Date().getTime();
+  function setTimeTaken() {
+    var endTime = new Date().getTime();
+    var timeTaken = (endTime - startTime) / 1000;
+    document.getElementById("time_taken").value = timeTaken;
+    return true;
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Creation Study</h1>
+    <p><strong>Policy ({{ current }} of {{ total }}):</strong> {{ policy }} - {{ policy_description }}</p>
+    <form action="{{ url_for('main.password_submitted') }}" method="POST" onsubmit="return setTimeTaken();">
+      <input type="hidden" id="time_taken" name="time_taken" value="0">
+      <label for="password">Enter your password:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Submit Password">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final Survey</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 700px; margin: 0 auto; }
+    .question { margin: 20px 0; }
+    .question label { display: block; margin-bottom: 10px; }
+    select, textarea, input[type="text"] { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px; }
+    input[type="submit"] { padding: 10px 20px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Final Survey</h1>
+    <form action="{{ url_for('main.final_submit') }}" method="POST">
+      <div class="question">
+        <label>1. What year are you in?</label>
+        <select name="year_in" required>
+          <option value="">Select your year</option>
+          <option value="Freshman">Freshman</option>
+          <option value="Sophomore">Sophomore</option>
+          <option value="Junior">Junior</option>
+          <option value="Senior">Senior</option>
+        </select>
+      </div>
+      <div class="question">
+        <label>2. What class are you taking this in?</label>
+        <select name="class_taken" required>
+          <option value="">Select your class</option>
+          <option value="Computer Science 1">Computer Science 1</option>
+          <option value="Computer Science 2">Computer Science 2</option>
+          <option value="CS Seminar">CS Seminar</option>
+        </select>
+      </div>
+      <div class="question">
+        <label>3. Would you use external tools to remember these passwords? (e.g., password managers, writing them down, etc.)</label>
+        <textarea name="external_tool_usage" placeholder="Your answer here..."></textarea>
+      </div>
+      <div class="question">
+        <label>4. Do you have any general frustrations? (Please share any additional thoughts.)</label>
+        <textarea name="general_frustrations" placeholder="Your answer here..."></textarea>
+      </div>
+      <div class="question">
+        <label>5. Other (Any additional comments or suggestions):</label>
+        <textarea name="other" placeholder="Your answer here..."></textarea>
+      </div>
+      <input type="submit" value="Submit Final Survey">
+    </form>
+  </div>
+</body>
+</html>

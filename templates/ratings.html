@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rate Your Experience for this Policy</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 600px; margin: 0 auto; }
+    .question { margin: 20px 0; }
+    .question label { display: block; margin-bottom: 5px; }
+    .scale { font-size: 0.9em; color: #555; margin-bottom: 10px; }
+    .options label { display: inline-block; margin-right: 10px; }
+    .options input[type="radio"] { margin-right: 3px; }
+    textarea { width: 100%; height: 80px; margin-top: 10px; }
+    input[type="submit"] { padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rate Your Experience for this Policy</h1>
+    <form action="{{ url_for('main.submit') }}" method="POST">
+      <div class="question">
+        <label>1. On a scale of 1 to 10, how frustrated did you feel while creating the password?</label>
+        <div class="scale">(1: Not frustrated, 10: Extremely frustrated)</div>
+        <div class="options">
+          {% for i in range(1, 11) %}
+            <label for="frustration{{ i }}">
+              <input type="radio" id="frustration{{ i }}" name="frustration_rating" value="{{ i }}" required>{{ i }}
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="question">
+        <label>2. On a scale of 1 to 10, how strong do you perceive your password to be?</label>
+        <div class="scale">(1: Very weak, 10: Very strong)</div>
+        <div class="options">
+          {% for i in range(1, 11) %}
+            <label for="strength{{ i }}">
+              <input type="radio" id="strength{{ i }}" name="perceived_strength" value="{{ i }}" required>{{ i }}
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="question">
+        <label>3. On a scale of 1 to 10, how memorable does your password feel?</label>
+        <div class="scale">(1: Not at all memorable, 10: Extremely memorable)</div>
+        <div class="options">
+          {% for i in range(1, 11) %}
+            <label for="memorability{{ i }}">
+              <input type="radio" id="memorability{{ i }}" name="memorability" value="{{ i }}" required>{{ i }}
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="question">
+        <label>4. Is this password similar to others you have used? Please explain (optional):</label>
+        <textarea name="reuse_info" placeholder="E.g., Yes, I use similar passwords on multiple sites, or No, this is unique."></textarea>
+      </div>
+      <div class="question">
+        <label>5. Why did you choose that password? Please explain your reasoning (optional):</label>
+        <textarea name="reasoning" placeholder="Your reasoning here..."></textarea>
+      </div>
+      <input type="submit" value="Submit Ratings">
+    </form>
+  </div>
+</body>
+</html>

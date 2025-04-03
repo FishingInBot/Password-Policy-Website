@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Policy Study Abstract</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Policy Study</h1>
+    <div class="abstract">
+      {{ abstract_text|safe }}
+    </div>
+    <form action="{{ url_for('main.start') }}" method="POST">
+      <input type="submit" value="I Opt-In and Begin">
+    </form>
+  </div>
+</body>
+</html>
