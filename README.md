@@ -2,26 +2,6 @@
 
 This project implements a password policy study website that collects password metrics (length, character counts, entropy, etc.) and user feedback for different password policies. The project is built with Flask and is split into multiple modules for maintainability.
 
-## Project Structure
-
-project/
-├── app.py                 # Application entry point
-├── config.py              # Configuration settings (loads .env)
-├── policies.py            # Policy definitions, descriptions, and validation functions
-├── routes.py              # Flask route definitions (Blueprint "main")
-├── utils.py               # Utility functions (password analysis, entropy, Levenshtein distance)
-├── common.txt             # Simple common password list
-├── names.txt              # List of names/usernames for Policy 1 checks
-├── rockyou.txt            # Extended common password list (or a subset for Policy 4)
-├── requirements.txt       # Python dependencies
-└── templates/             # HTML templates
-    ├── intro.html
-    ├── simulation.html
-    ├── password_submitted.html
-    ├── ratings.html
-    ├── final_survey.html
-    └── thank_you.html
-
 ## Prerequisites
 
 - [Python 3.x](https://www.python.org/downloads/)
