@@ -26,6 +26,15 @@ if not os.path.exists(RESPONSES_CSV):
             "reuse_info", "reasoning"
         ])
 
+# Ensure the final survey CSV has the proper header (include session_id and new metrics)
+if not os.path.exists(FINAL_SURVEY_CSV):
+    with open(FINAL_SURVEY_CSV, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([
+            "timestamp", "session_id", "year_in", "class_taken",
+            "external_tool_usage", "general_frustrations", "other"
+        ])
+
 # Ensure the levenshtein results CSV has a header
 if not os.path.exists(LEVENSHTEIN_CSV):
     with open(LEVENSHTEIN_CSV, 'w', newline='') as csvfile:
