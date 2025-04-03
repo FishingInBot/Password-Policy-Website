@@ -1,0 +1,32 @@
+Questions for each policies:
+Scale 1-10
+- Frustration
+- Strength
+- Memorable
+- Re-used
+
+Open-Ended
+- Why that password?
+
+Post policies questions:
+Demographics
+- Year
+- Class taking
+
+Open-Ended
+Write any down? (Managers?)
+Frustrations?
+Other
+
+Minimum specs
+Length: >= 8
+Complexity: 1 capital, 1 lowercase
+know: minimum rockyou
+
+Policies:
+1: 12 char length, no name/user in pass, 3/4 of lower, upper, special, number
+2: 15 char, mins
+3: 4/4 Complexity
+4: Max rockyou
+5: choice of >=15 length or 4/4 complex, rest minimum
+6: Range length 12<=x<=30?
