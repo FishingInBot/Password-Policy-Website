@@ -59,7 +59,7 @@ This project implements a password policy study website that collects password m
 
          python app.py
 
-   The app will run on [http://0.0.0.0:5000](http://0.0.0.0:5000). Open your browser and navigate to that URL to access the website.
+   The app will run on [http://127.0.0.1:5000](http://127.0.0.1:5000). Open your browser and navigate to that URL to access the website.
 
 ## Using VS Code
 
