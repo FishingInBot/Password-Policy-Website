@@ -1,3 +1,9 @@
 # Lets ignore standard python files that we use in our project
 __pycache__/
+
+# python env files
+.venv/
 .env
+
+# CSV files
+*.csv
