@@ -15,11 +15,11 @@ if os.path.exists("names.txt"):
             NAMES.add(line.strip().lower())
 
 # Load extended common password list from rockyou.txt (or a subset) for Policy 4
-ROCKYOU_PASSWORDS = set()
-if os.path.exists("rockyou.txt"):
-    with open("rockyou.txt", "r", encoding="utf-8", errors="ignore") as f:
+BIGLIST_PASSWORDS = set()
+if os.path.exists("BigList.txt"):
+    with open("BigList.txt", "r", encoding="utf-8", errors="ignore") as f:
         for line in f:
-            ROCKYOU_PASSWORDS.add(line.strip().lower())
+            BIGLIST_PASSWORDS.add(line.strip().lower())
 
 # Define our policies.
 PASSWORD_POLICIES = [
@@ -95,7 +95,7 @@ def validate_password(password, policy):
             return False, "For Policy 3, the password must contain an uppercase letter, a lowercase letter, a digit, and a special character."
         return True, ""
     elif policy == "Policy 4":
-        if password.lower() in ROCKYOU_PASSWORDS:
+        if password.lower() in BIGLIST_PASSWORDS:
             return False, "For Policy 4, the password is too common according to our extended list."
         return True, ""
     elif policy == "Policy 5":
