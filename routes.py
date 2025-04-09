@@ -48,7 +48,7 @@ def intro():
     In today’s digital landscape, strict password policies are crucial for protecting sensitive data, but they often lead to insecure workarounds.
     Our research examines how user behavior and psychological factors like frustration and ease-of-use impact security.
     <br><br>We only store anonymized metrics derived from your password (such as character counts, time taken, and computed entropy), never the actual password.
-    Participation is entirely optional and opt-in, and your privacy is our priority.
+    Participation is entirely optional and opt-in, and your privacy is our priority. The policies will be served in a randomized order, and you will be asked to create a password for each policy.
     <br><br>Your input will help us develop balanced, user-friendly security policies that truly safeguard digital information.
     """
     return render_template("intro.html", abstract_text=abstract_text)

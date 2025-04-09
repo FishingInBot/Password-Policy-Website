@@ -36,7 +36,7 @@ POLICY_DESCRIPTIONS = {
     "Policy 1": "Minimum 12 characters; at least 3 of 4 character types (uppercase, lowercase, digit, special) required; your name/ranger ID must not appear in the password.",
     "Policy 2": "Password must be at least 15 characters long and include a capital and lowercase letter.",
     "Policy 3": "Password must include all four character types (uppercase, lowercase, digit, special). It must still be at least 8 characters long.",
-    "Policy 4": "Password must not be in our extended common password list. It must still be 8 characters long and include a capital and lowercase letter.",
+    "Policy 4": "Password must not be in our extended common password list, this list is created from known common passwords used. It must still be 8 characters long and include a capital and lowercase letter.",
     "Policy 5": "Password must be at least 15 characters long with a capital and lowercase letter OR include all four character types and be at least 8 characters long.",
     "Policy 6": "Password length must be between 12 and 30 characters (inclusive) and include a capital and lowercase letter."
 }
